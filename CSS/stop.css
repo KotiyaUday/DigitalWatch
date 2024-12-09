@@ -1,0 +1,131 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    background-color: black;
+    user-select: none;
+}
+
+.main{
+    width: 100vw;
+    height: 60vh;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    margin-top: 7vh;
+    /* background-color: aqua; */
+}
+
+.hm{
+    /* display: flex;
+    align-items: end;
+    justify-content: center; */
+    font-size: 260px;
+    /* background-color: aqua; */
+}
+
+.loader{
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.load{
+    height: 200px;
+    width: 200px;
+    /* background-color: white; */
+    border: 15px solid rgba(31, 31, 31, 0.386);
+    border-radius: 50%;
+    border-top: 15px dotted blue;
+    border-bottom: 15px dotted rgb(3, 27, 70);
+    border-right: 15px dotted white;
+    border-left: 15px dotted rgb(0, 255, 102);
+    animation: spin 2s linear infinite normal;
+}
+
+@keyframes spin {
+    from{
+        transform: rotate(0deg);
+    }
+    to{
+        transform: rotate(360deg);
+    }
+}
+
+.header{
+    height: 80px;
+    /* background-color: rgb(4, 45, 45); */
+    align-items: center;
+    justify-content: end;
+    padding-right: 20px;
+    display: none;
+}
+
+.nav{
+    background:none;
+    color: white;
+    font-size: 23px;
+    border: none;
+    padding: 10px;
+    margin-right: 10px;
+    text-decoration: none;
+}
+
+.nav:hover, .act{
+    font-size: 25px;
+    background-color: rgb(84, 80, 80);
+    border-radius: 10px;
+}
+
+.btn{
+    height: 60px;
+    width: 100vw;
+    /* background-color: rgb(7, 56, 56); */
+    display: none;
+    align-items: center;
+    justify-content: center;
+}
+
+.com{
+    background: none;
+    color: white;
+    border: 2px solid white;
+    padding: 10px 20px;
+    font-size: 20px;
+    margin: 10px;
+    border-radius: 10px;
+}
+
+.com:hover{
+    background-color: gray;
+    font-size: 25px;
+    border: none;
+}
+
+@media only screen and (max-width: 931px){
+    /* *{
+        background-color: red
+    } */
+
+    .header{
+        justify-content: center;
+        padding-right: 0px;
+    }
+
+    .hm{
+        font-size: 160px;
+    }
+}
+
+@media only screen and (max-width: 581px){
+    /* *{
+        background-color: rgb(0, 238, 255)
+    } */
+
+    .hm{
+        font-size: 95px;
+        padding: 10px;
+    }
+}

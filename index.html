@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Watch</title>
+    <link rel="stylesheet" href="CSS/style.css">
+</head>     
+<body>
+    <div class="loader" id="load">
+        <div class="load"></div>
+    </div>
+
+    <div class="header" id="header">
+        <a href="#" class="nav act" id="clock">Clock</a>
+        <a href="stop.html" class="nav"">Stopwatch</a>
+        <a href="timer.html" class="nav">Timer</a>
+    </div>
+
+    <div class="main" id="main">
+        <div class="area">
+            <div class="inner weekdays">
+                <div class="days" id="0">SUN</div>
+                <div class="days active" id="1">MON</div>
+                <div class="days" id="2">TUE</div>
+                <div class="days" id="3">WED</div>
+                <div class="days" id="4">THU</div>
+                <div class="days" id="5">FRI</div>
+                <div class="days" id="6">STA</div>
+            </div>
+            <div class="inner time">
+                <div class="date" id="date">1 JAN</div>
+                <div class="times">
+                    <div class="hm" id="hm">00:00</div>
+                    <span class="sec" id="sec">00</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+<script src="JS/script.js"></script>
+</html>
+
+<!-- 
+Q. What i learn from this project ?
+=>  1. setInterval()
+    2. clearInterval()
+    3. parseInt()
+    4. Different between setInterval & setTimeout function.
+    5. How to disable the button using JavaScript. (element.disable = true)
+    6. How to remove hover effect of element using JavaScript. (disable => element.style.pointerEvents = 'none' ||| enable => element.style.pointerEvents = 'auto')
+    7. How to make loader of different syles
+    8. How to change the element property using JS which access using class name(at timer.html file)
+    -->

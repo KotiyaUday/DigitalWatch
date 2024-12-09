@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stop Watch</title>
+    <link rel="stylesheet" href="CSS/stop.css">
+</head>
+<body>
+    <div class="loader" id="load">
+        <div class="load"></div>
+    </div>
+
+    <div class="header" id="header">
+        <a href="index.html" class="nav" id="clock">Clock</a>
+        <a href="#" class="nav act">Stopwatch</a>
+        <a href="timer.html" class="nav">Timer</a>
+    </div>
+
+    <div class="main" id="main">
+        <div class="times">
+            <div class="hm" id="hms">00:00:00</div>
+        </div>
+    </div>
+
+    <div class="btn" id="btn">
+        <button id="start" class="com" onclick="start()">Start</button>
+        <button id="restart" class="com" onclick="restart()">Restart</button>
+        <button id="stop" class="com" onclick="stop()">Stop</button>
+    </div>
+</body>
+<script src="JS/stop.js"></script>
+</html>

@@ -1,0 +1,252 @@
+:root{
+    --bg:black;
+}
+
+* {
+    margin: 0px;
+    padding: 0px;
+    background-color: var(--bg);
+    user-select: none;
+}
+
+.loader {
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.load {
+    height: 200px;
+    width: 200px;
+    /* background-color: white; */
+    border: 15px solid rgba(31, 31, 31, 0.386);
+    border-radius: 50%;
+    border-top: 15px dotted blue;
+    border-bottom: 15px dotted rgb(3, 27, 70);
+    border-right: 15px dotted white;
+    border-left: 15px dotted rgb(0, 255, 102);
+    animation: spin 2s linear infinite normal;
+}
+
+@keyframes spin {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.header {
+    height: 80px;
+    /* background-color: rgb(4, 45, 45); */
+    align-items: center;
+    justify-content: end;
+    padding-right: 20px;
+    display: none;
+}
+
+.nav {
+    background: none;
+    color: white;
+    font-size: 23px;
+    border: none;
+    padding: 10px;
+    margin-right: 10px;
+    text-decoration: none;
+}
+
+.nav:hover,
+.act {
+    font-size: 25px;
+    background-color: rgb(84, 80, 80);
+    border-radius: 10px;
+}
+
+.main {
+    display: none;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    height: 88vh;
+}
+
+.hm {
+    color: white;
+    font-size: 260px;
+}
+
+.btn {
+    height: 60px;
+    width: 40vw;
+    /* background-color: rgb(7, 56, 56); */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 18px;
+    gap: 30px;
+}
+
+.com {
+    background: none;
+    color: white;
+    border: 2px solid white;
+    padding: 10px 20px;
+    font-size: 20px;
+    /* margin: 50px; */
+    border-radius: 10px;
+}
+
+.com:hover {
+    background-color: gray;
+    font-size: 25px;
+    border: none;
+}
+
+.upper{
+    display: none;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.356);
+    height: 100vh;
+    width: 100vw;
+}
+
+.alertBox{
+    background-color: rgba(192, 192, 192, 0.7);
+    height: 30vh;
+    width: 30vw;
+    border-radius: 20px;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    box-shadow: 10px 10px 100px rgba(0, 0, 0, 0.868);
+}
+
+.text{
+    font-size: 60px;
+    margin: 15px;
+    color: black;
+    background: none;
+}
+
+.btnOk{
+    width: 150px;
+    height: 50px;
+    padding: 8px 15px;
+    border: none;
+    background-color: rgba(0, 0, 0, 0.762);
+    color: white;
+    border-radius: 10px;
+    font-size: 20px;
+    align-self: flex-end;
+    margin: 15px;
+    cursor: pointer;
+}
+
+.btnOk:hover{
+    background-color: rgb(158, 158, 158);
+    color: black;
+}
+
+@media only screen and (max-width: 1240px){
+    /* *{
+        background-color: red
+    } */
+
+    .btn{
+        width: 60vw;
+    }
+
+    .alertBox{
+        width: 40vw;
+    }
+}
+
+@media only screen and (max-width: 950px){
+    /* *{
+        background-color: yellow;
+    } */
+
+    .header{
+        justify-content: center;
+        padding-right: 0px;
+    } 
+
+    .hm{
+        font-size: 180px;
+    }
+
+    .btn{
+        width: 80vw;
+    }
+
+    .alertBox{
+        width: 60vw;
+    }
+}
+
+@media only screen and (max-width: 640px){
+    /* *{
+        background-color: rgb(0, 0, 255);
+    } */
+
+    .hm{
+        font-size: 120px;
+    }
+
+    .btn{
+        width: 100vw;
+    }
+
+    .alertBox{
+        width: 80vw;
+    }
+}
+
+@media only screen and (max-width: 490px){
+    /* *{
+        background-color: rgb(255, 0, 225);
+    } */
+
+    .hm{
+        font-size: 100px;
+    }
+
+    .btn{
+        height: 150px;
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+        grid-template-rows: repeat(2,1fr);
+        width: 80vw;
+    }
+
+    .com {
+        padding: 10px 0px;
+    }
+
+    .text{
+        font-size: 40px;
+    }
+
+    .alertBox{
+        height: 25vh;
+    }
+}
+
+@media only screen and (max-width: 356px){
+    /* *{
+        background-color: rgb(0, 255, 0);
+    } */
+
+    .hm{
+        font-size: 80px;
+    }
+
+    .alertBox{
+        height: 20vh;
+    }
+}

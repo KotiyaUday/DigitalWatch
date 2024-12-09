@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stop Watch</title>
+<link rel="stylesheet" href="CSS/timer.css"><style>
+        
+    </style>
+</head>
+
+<body>
+    <div class="loader" id="load">
+        <div class="load"></div>
+    </div>
+
+    <div class="header" id="header">
+        <a href="index.html" class="nav">Clock</a>
+        <a href="stop.html" class="nav">Stopwatch</a>
+        <a href="#" class="nav act">Timer</a>
+    </div>
+
+    <div class="main" id="main">
+        <div class="hm" id="hm">
+            00:00:00
+        </div>
+        <div class="btn" id="btn">
+            <button id="start" class="com" onclick="start()">Start</button>
+            <button id="restart" class="com" onclick="reso(1)">Restart</button>
+            <button id="stop" class="com" onclick="reso(0)">Stop</button>
+            <button class="com" onclick="getData()" id="set">Set Time</button>
+        </div>
+    </div>
+
+    <div class="upper" id="up">
+        <div class="alertBox">
+            <p class="text">Time Up!</p>
+            <button class="btnOk" onclick="reset()">OK</button>
+        </div>
+    </div>
+
+    <audio id="audio" src="Audio\alertSound.mp3" preload="auto" style="display: none;"></audio>
+</body>
+<script src="JS/timer.js"></script>
+</html>

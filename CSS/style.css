@@ -1,0 +1,213 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    background-color: black;
+    user-select: none;
+}
+
+.main{
+    width: 100vw;
+    display: none;
+    justify-content: center;
+}
+
+.area{
+    height: 70vh;
+    width: 70vw;
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    grid-template-rows: 1fr;
+    align-items: center;
+    justify-content: center;
+}
+
+.inner{
+    height: 60vh;
+}
+
+.weekdays{
+    color: white;
+    display: grid;
+    grid-template-columns: repeat(1,1fr);
+    grid-template-rows: repeat(7,1fr);
+}
+
+.days{
+    display: flex;
+    align-items: end;
+    justify-content: center;
+    font-size: 25px;
+    color: grey;
+}
+
+.active{
+    font-size: 30px;
+    color: white;
+    font-weight: bold;
+}
+
+.time{
+    color: white;
+    display:grid;
+    grid-template-columns: repeat(1,1fr);
+    grid-template-rows: 1fr 3fr;
+}
+
+.date{
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    font-size: 60px;
+    margin-right: 70px;
+}
+
+.times{
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    grid-template-rows: 1fr;
+}
+
+.hm{
+    display: flex;
+    align-items: end;
+    justify-content: center;
+    font-size: 260px;
+}
+
+.sec{
+    font-size: 120px;
+    display: flex;
+    align-items: end;
+    margin-bottom: 35px;
+}
+
+.loader{
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.load{
+    height: 200px;
+    width: 200px;
+    /* background-color: white; */
+    border: 15px solid rgba(31, 31, 31, 0.386);
+    border-radius: 50%;
+    border-top: 15px dotted blue;
+    border-bottom: 15px dotted rgb(3, 27, 70);
+    border-right: 15px dotted white;
+    border-left: 15px dotted rgb(0, 255, 102);
+    animation: spin 2s linear infinite normal;
+}
+
+@keyframes spin {
+    from{
+        transform: rotate(0deg);
+    }
+    to{
+        transform: rotate(360deg);
+    }
+}
+
+.header{
+    height: 80px;
+    width: 98vw;
+    /* background-color: rgb(4, 45, 45); */
+    align-items: center;
+    justify-content: end;
+    padding-right: 20px;
+    display: none;
+}
+
+.nav{
+    background:none;
+    color: white;
+    font-size: 23px;
+    border: none;
+    padding: 10px;
+    margin-right: 10px;
+    text-decoration: none;
+}
+
+.nav:hover, .act{
+    font-size: 25px;
+    background-color: rgb(84, 80, 80);
+    border-radius: 10px;
+}
+
+@media only screen and (max-width: 835px){
+    /* *{
+        background-color: red
+    } */
+
+    .header{
+        justify-content: center;
+        padding-right: 0px;
+    }
+
+    .area{
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 3fr;
+        height: 40vh;
+    }
+
+    .inner{
+        height: 0vh;
+    }
+
+    .weekdays{
+        grid-template-columns: repeat(7,1fr);
+        grid-template-rows: repeat(1,1fr);
+    }
+
+    .days{
+        margin-right: 10px;
+    }
+
+    .date{
+        font-size: 40px;
+    }
+
+    .hm{
+        font-size: 150px;
+    }
+
+    .sec{
+        font-size: 50px;
+    }
+}
+
+@media only screen and (max-width: 460px){
+    /* *{
+        background-color: aqua;
+    } */
+
+    .weekdays{
+        grid-template-columns: repeat(1,1fr);
+        grid-template-rows: repeat(1,1fr);
+    }
+
+    .days{
+        display: none;
+    }
+
+    .active{
+        display: flex;
+    }
+
+    .date{
+        margin-right: 26px;
+        font-size:30px;
+    }
+
+    .hm{
+        font-size: 100px;
+    }
+
+    .sec{
+        font-size: 40px;
+        margin-bottom: 15px;
+    }
+}
